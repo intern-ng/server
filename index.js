@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var util = require('./lib/utility');
+
+// Load configuration
+var cfg = util.defaults(require('./configure'), {
+  host: '0.0.0.0',
+  port: 10086
+});
+
+// Load server component
+var server = require('./lib/server.js');
+
+// Start listening
+server.listen(cfg.port, cfg.host, function () {
+  console.log('Listening ' + cfg.host + ' on ' + cfg.port + '...');
+});
+

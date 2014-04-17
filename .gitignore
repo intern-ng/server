@@ -1,0 +1,12 @@
+node_modules/
+components/
+static/
+npm-debug.log
+upload/
+tmpupload/
+
+# component build output
+build/
+
+*.log
+

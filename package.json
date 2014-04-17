@@ -1,0 +1,22 @@
+{
+  "name": "intern-ng-server",
+  "version": "0.1.0",
+  "author": "shinohane <imandry.c@gmail.com>",
+  "dependencies": {
+    "express": "~3.5.0",
+    "mysql": "~2.1.0",
+    "password-hash": "~1.2.1",
+    "request": "~2.34.0",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "node-dev": "*",
+    "chai": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "node ./node_modules/.bin/mocha -R spec"
+  },
+  "private": true
+}
