@@ -8,11 +8,27 @@ var cfg = util.defaults(require('./configure'), {
   port: 10086
 });
 
-// Load server component
-var server = require('./lib/server.js');
+var db = require('./lib/db');
+db.initialize(function (err, val) {
 
-// Start listening
-server.listen(cfg.port, cfg.host, function () {
-  console.log('Listening ' + cfg.host + ' on ' + cfg.port + '...');
+  if (err) {
+    console.log('ERROR: ' + err);
+    process.exit(1);
+  }
+
+  if (val) {
+    console.log('System database initialization done\n');
+    console.log('Administrator account created.\n');
+    console.log('\tusername: ' + val.username.red + ' password: ' + val.password.red);
+    console.log('Please change the administrator password as soon as possible after login');
+  }
+  // Load server component
+  var server = require('./lib/server.js');
+
+  // Start listening
+  server.listen(cfg.port, cfg.host, function () {
+    console.log('Listening ' + cfg.host + ' on ' + cfg.port + '...');
+  });
 });
+
 

@@ -7,7 +7,9 @@
     "mysql": "~2.1.0",
     "password-hash": "~1.2.1",
     "request": "~2.34.0",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "colors": "~0.6.2",
+    "password-generator": "~0.2.2"
   },
   "devDependencies": {
     "node-dev": "*",
