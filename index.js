@@ -17,8 +17,8 @@ db.initialize(function (err, val) {
   }
 
   if (val) {
-    console.log('System database initialization done\n');
-    console.log('Administrator account created.\n');
+    console.log('System database initialization done');
+    console.log('Administrator account created.');
     console.log('\tusername: ' + val.username.red + ' password: ' + val.password.red);
     console.log('Please change the administrator password as soon as possible after login');
   }
